@@ -93,21 +93,26 @@ LeRobot SO-101 로봇팔을 키보드로 조종한다.
    ```powershell
    winget install --interactive --exact dorssel.usbipd-win
    ```
+
 2. **WSL 터미널을 하나 열어 둔다.** (WSL이 켜져 있어야 attach가 된다)
+
 3. **장치 확인** — PowerShell(관리자)
    ```powershell
    usbipd list
    ```
    로봇 컨트롤러의 BUSID(예: `4-4`)를 확인한다.
+
 4. **(처음 한 번) 공유 설정** — PowerShell(관리자)
    ```powershell
    usbipd bind --busid 4-4
    ```
+
 5. **WSL로 연결** — PowerShell (관리자 권한 필요 없음)
    ```powershell
    usbipd attach --wsl --busid 4-4
    ```
    로봇을 다시 꽂거나 PC를 재부팅하면 이 단계를 다시 한다.
+
 6. **WSL에서 확인**
    ```bash
    ls /dev/ttyACM*        # 예: /dev/ttyACM0
@@ -115,6 +120,7 @@ LeRobot SO-101 로봇팔을 키보드로 조종한다.
    ```
 
 ※ attach 중에는 Windows에서 그 장치를 쓸 수 없다.
+
 ※ `attach`가 실패하면 PowerShell에서 `wsl --shutdown` 후 WSL을 다시 열고 다시 시도한다.
 
 
