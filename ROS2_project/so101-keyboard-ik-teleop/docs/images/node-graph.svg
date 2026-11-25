@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2490 1050" width="2490" height="1050" font-family="Noto Sans CJK KR, Noto Sans KR, Malgun Gothic, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker></defs>
+<rect width="2490" height="1050" fill="#fff"/>
+<rect x="200" y="10" width="2010" height="850" rx="14" fill="#fafafa" stroke="#9ca3af" stroke-width="1.6" stroke-dasharray="8 6"/>
+<text x="220" y="42" font-size="20" font-weight="700" fill="#4b5563">WSL2 Ubuntu · ROS 2</text>
+<rect x="10" y="348.0" width="120" height="64" rx="30" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="70.0" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">사용자</text>
+<text x="70.0" y="389" text-anchor="middle" font-size="11.5" fill="#4b5563">(키보드)</text>
+<rect x="2320" y="348.0" width="130" height="64" rx="30" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="2385.0" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">SO-101</text>
+<text x="2385.0" y="389" text-anchor="middle" font-size="11.5" fill="#4b5563">서보모터 6개</text>
+<rect x="240" y="335.0" width="230" height="90" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="355.0" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">keyboard_node</text>
+<text x="355.0" y="381" text-anchor="middle" font-size="11.5" fill="#4b5563">C++ · GLFW 창  (B1, B2)</text>
+<text x="355.0" y="396" text-anchor="middle" font-size="11.5" fill="#4b5563">키 상태 읽기 → 명령으로 변환</text>
+<rect x="840" y="140.0" width="260" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="970.0" y="172" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">ik_node</text>
+<text x="970.0" y="191" text-anchor="middle" font-size="11.5" fill="#4b5563">C++  (B3, B4, B11)</text>
+<text x="970.0" y="206" text-anchor="middle" font-size="11.5" fill="#4b5563">목표 손목 위치 · 역기구학 · 순기구학</text>
+<rect x="840" y="330.0" width="260" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="970.0" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">wrist_node</text>
+<text x="970.0" y="381" text-anchor="middle" font-size="11.5" fill="#4b5563">C++  (B5)</text>
+<text x="970.0" y="396" text-anchor="middle" font-size="11.5" fill="#4b5563">목표 기울기 유지 → wrist_flex 계산</text>
+<rect x="840" y="570.0" width="260" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="970.0" y="602" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">direct_node</text>
+<text x="970.0" y="621" text-anchor="middle" font-size="11.5" fill="#4b5563">C++  (B6, B7)</text>
+<text x="970.0" y="636" text-anchor="middle" font-size="11.5" fill="#4b5563">wrist_roll · gripper 목표 만들기</text>
+<rect x="1370" y="330.0" width="260" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1500.0" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">merge_node</text>
+<text x="1500.0" y="381" text-anchor="middle" font-size="11.5" fill="#4b5563">C++  (B8)</text>
+<text x="1500.0" y="396" text-anchor="middle" font-size="11.5" fill="#4b5563">6개 관절 취합 · 한계·변화량 제한</text>
+<rect x="1900" y="330.0" width="250" height="100" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="2025.0" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">driver_node</text>
+<text x="2025.0" y="381" text-anchor="middle" font-size="11.5" fill="#4b5563">Python · LeRobot  (B9, B10)</text>
+<text x="2025.0" y="396" text-anchor="middle" font-size="11.5" fill="#4b5563">모터 명령 전달 · 현재 위치 읽기</text>
+<rect x="1330" y="100.0" width="240" height="100" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1450.0" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">RViz2  (B12)</text>
+<text x="1450.0" y="159" text-anchor="middle" font-size="11.5" fill="#4b5563">디버깅용 · 선택</text>
+<rect x="1780" y="100.0" width="200" height="100" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="1880.0" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">robot_state_publisher</text>
+<text x="1880.0" y="159" text-anchor="middle" font-size="11.5" fill="#4b5563">URDF → tf · 디버깅용</text>
+<rect x="1430" y="750.0" width="300" height="80" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+<text x="1580.0" y="772" text-anchor="middle" font-size="16" font-weight="700" fill="#111827">controller_params.yaml</text>
+<text x="1580.0" y="791" text-anchor="middle" font-size="11.5" fill="#4b5563">속도 · 작업영역 · 관절 한계</text>
+<text x="1580.0" y="806" text-anchor="middle" font-size="11.5" fill="#4b5563">기울기 유지 기본값</text>
+<path d="M130,380 L240,380" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="151.23" y="348" width="67.53999999999999" height="21" fill="#fff" opacity="0.93"/>
+<text x="185" y="364" text-anchor="middle" font-size="17"  fill="#111827">키 입력</text>
+<path d="M470,380 L520,380 L520,190 L840,190" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="629.57" y="166" width="100.85999999999999" height="21" fill="#fff" opacity="0.93"/>
+<text x="680" y="182" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/move_cmd</text>
+<rect x="582.605" y="198.5" width="194.79" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="680" y="212" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">geometry_msgs/Vector3</text>
+<path d="M470,380 L840,380" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="629.57" y="356" width="100.85999999999999" height="21" fill="#fff" opacity="0.93"/>
+<text x="680" y="372" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/tilt_cmd</text>
+<rect x="609.575" y="388.5" width="140.85" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="680" y="402" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">sensor_msgs/Joy</text>
+<path d="M520,380 L520,620 L840,620" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="547.29" y="596" width="265.41999999999996" height="21" fill="#fff" opacity="0.93"/>
+<text x="680" y="612" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/roll_cmd · /gripper_cmd</text>
+<rect x="577.095" y="628.5" width="205.81" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="680" y="642" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">std_msgs/Float32 (각각)</text>
+<path d="M970,240 L970,330" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="979" y="266" width="121.94" height="21" fill="#fff" opacity="0.93"/>
+<text x="982" y="282" text-anchor="start" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/arm_target</text>
+<rect x="979" y="289.5" width="203.78" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="982" y="303" text-anchor="start" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">sensor_msgs/JointState</text>
+<path d="M1100,232 L1500,232 L1500,330" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="1239.03" y="208" width="121.94" height="21" fill="#fff" opacity="0.93"/>
+<text x="1300" y="224" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/arm_target</text>
+<rect x="1198.11" y="240.5" width="203.78" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1300" y="254" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">sensor_msgs/JointState</text>
+<path d="M1100,380 L1370,380" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="1137.14" y="356" width="195.71999999999997" height="21" fill="#fff" opacity="0.93"/>
+<text x="1235" y="372" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/wrist_flex_target</text>
+<rect x="1160.08" y="388.5" width="149.84" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1235" y="402" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">std_msgs/Float32</text>
+<path d="M1100,620 L1500,620 L1500,430" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="1135.67" y="596" width="328.65999999999997" height="21" fill="#fff" opacity="0.93"/>
+<text x="1300" y="612" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/roll_target · /gripper_target</text>
+<rect x="1197.095" y="628.5" width="205.81" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1300" y="642" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">std_msgs/Float32 (각각)</text>
+<path d="M1630,380 L1900,380" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="1688.22" y="356" width="153.56" height="21" fill="#fff" opacity="0.93"/>
+<text x="1765" y="372" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/joint_command</text>
+<rect x="1663.11" y="388.5" width="203.78" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1765" y="402" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">sensor_msgs/JointState</text>
+<path d="M2150,360 L2320,360" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="2170.46" y="330" width="129.07999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="2235" y="346" text-anchor="middle" font-size="17"  fill="#111827">모터 목표 위치</text>
+<path d="M2320,405 L2150,405" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="2170.46" y="418" width="129.07999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="2235" y="434" text-anchor="middle" font-size="17"  fill="#111827">모터 현재 위치</text>
+<rect x="2301.815" y="428.5" width="166.37" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="2385" y="442" text-anchor="middle" font-size="14.5"  fill="#4b5563">USB 시리얼 (usbipd)</text>
+<path d="M2025,330 L2025,62 L970,62 L970,140" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<rect x="1428.49" y="38" width="143.01999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="1500" y="54" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/joint_states</text>
+<rect x="1398.11" y="70.5" width="203.78" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1500" y="84" text-anchor="middle" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">sensor_msgs/JointState</text>
+<path d="M1100,170 L1330,170" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<rect x="1122.41" y="139" width="185.17999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="1215" y="155" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/target_wrist_pos</text>
+<rect x="1111.87" y="182" width="206.26" height="21" fill="#fff" opacity="0.93"/>
+<text x="1215" y="198" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/current_wrist_pose</text>
+<path d="M2025,150 L1980,150" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<path d="M1780,150 L1570,150" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<rect x="1656.19" y="126" width="37.62" height="21" fill="#fff" opacity="0.93"/>
+<text x="1675" y="142" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">/tf</text>
+<path d="M1580,750 L1580,430" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<rect x="1589" y="574" width="137.24" height="21" fill="#fff" opacity="0.93"/>
+<text x="1592" y="590" text-anchor="start" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">ROS 2 파라미터</text>
+<rect x="1589" y="597.5" width="173.91" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1592" y="611" text-anchor="start" font-size="14.5" font-family="DejaVu Sans Mono, monospace" fill="#4b5563">(C++ 노드 4개가 읽음)</text>
+<text x="220" y="895" font-size="17" fill="#4b5563">※ 점선 박스·화살표는 디버깅용(선택)이다. 조작에는 필요 없고, 목표·현재 손목 위치와 관절각은 터미널 로그로도 확인한다.</text>
+<text x="220" y="925" font-size="17" fill="#4b5563">※ /joint_states는 wrist_node·direct_node도 구독한다(시작 때 목표를 현재 관절각에 맞춤). 선을 줄이려고 ik_node만 그렸다.</text>
+<text x="220" y="955" font-size="17" fill="#4b5563">※ GLFW 창은 WSLg가 Windows 화면에 띄워준다 (우분투 데스크톱 불필요). 키 안내·경고는 노드를 실행한 터미널에 출력한다.</text>
+<text x="220" y="985" font-size="17" fill="#4b5563">※ 노드 안의 블럭끼리는 함수 호출로 데이터를 주고받고, 노드 사이만 토픽을 쓴다. 토픽 아래 작은 글씨는 메시지 타입(안)이다.</text>
+<text x="1900" y="790" font-size="16" fill="#374151">실선 = 필수 토픽</text>
+<text x="1900" y="820" font-size="16" fill="#374151">점선 = 디버깅용(선택)·설정 파일</text>
+</svg>

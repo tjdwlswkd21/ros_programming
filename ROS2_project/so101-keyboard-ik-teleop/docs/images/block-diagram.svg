@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3170 1190" width="3170" height="1190" font-family="Noto Sans CJK KR, Noto Sans KR, Malgun Gothic, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker></defs>
+<rect width="3170" height="1190" fill="#fff"/>
+<path d="M120.0,560 L230.0,560" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M470.0,560 L580.0,560" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M820.0,560 L896.0869565217391,560 L896.0869565217391,330 L1170.0,330" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M820.0,560 L1170.0,560" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M820.0,560 L896.0869565217391,560 L896.0869565217391,770 L1170.0,770" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M820.0,560 L896.0869565217391,560 L896.0869565217391,950 L1170.0,950" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1410.0,330 L1620.0,330" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1740.0,405 L1740.0,455 L1290.0,455 L1290.0,485" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1860.0,330 L1976.4705882352941,330 L1976.4705882352941,545 L2080.0,545" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1410.0,580 L2080.0,580" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1410.0,770 L1989.4117647058824,770 L1989.4117647058824,615 L2080.0,615" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1410.0,950 L2041.1764705882354,950 L2041.1764705882354,650 L2080.0,650" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M2200.0,918 L2200.0,710" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M2320.0,610 L2510.0,610" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M2750.0,610 L2990.0,610" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M3045.0,578 L3045.0,90 L2750.0,90" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M2510.0,90 L1410.0,90" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1290.0,165 L1290.0,255" fill="none" stroke="#374151" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arr)"/>
+<path d="M1170.0,90 L580.0,90" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<path d="M1210.0,255 L1210.0,200 L460.0,200 L460.0,165" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<path d="M340.0,90 L120.0,90" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-dasharray="6 5" stroke-linejoin="round" marker-end="url(#arrg)"/>
+<rect x="20.0" y="528.0" width="100" height="64" rx="32" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="70.0" y="556" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">사용자</text>
+<text x="70.0" y="575" text-anchor="middle" font-size="11" fill="#4b5563">(키보드)</text>
+<rect x="230.0" y="485.0" width="240" height="150" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="350.0" y="507.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B1. 키보드입력</text>
+<text x="350.0" y="523.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[keyboard_node · C++]</text>
+<text x="240.0" y="545.0" font-size="11" fill="#1f2937">GLFW 창이 받은 키 이벤트로</text>
+<text x="240.0" y="559.5" font-size="11" fill="#1f2937">각 키의 눌림/뗌 상태를 갱신한다</text>
+<text x="240.0" y="574.0" font-size="11" fill="#1f2937">매 주기 지금 눌려 있는 모든 키와</text>
+<text x="240.0" y="588.5" font-size="11" fill="#1f2937">Ctrl 상태를 key_state로 내보낸다</text>
+<rect x="580.0" y="485.0" width="240" height="150" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text x="700.0" y="507.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B2. 입력해석</text>
+<text x="700.0" y="523.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[keyboard_node · C++]</text>
+<text x="590.0" y="545.0" font-size="11" fill="#1f2937">Ctrl이 눌렸으면 Ctrl 명령만 처리</text>
+<text x="590.0" y="559.5" font-size="11" fill="#1f2937">· Ctrl+W/S → 기울기 증감</text>
+<text x="590.0" y="574.0" font-size="11" fill="#1f2937">· Ctrl+A/D → 손목 회전</text>
+<text x="590.0" y="588.5" font-size="11" fill="#1f2937">· W/S·A/D → 앞뒤·좌우(x,y)</text>
+<text x="590.0" y="603.0" font-size="11" fill="#1f2937">· ↑↓ 위·아래(z), ←→ 그리퍼</text>
+<text x="590.0" y="617.5" font-size="11" fill="#1f2937">· T 토글, 각 방향은 -1 / 0 / +1</text>
+<rect x="1170.0" y="255.0" width="240" height="150" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1290.0" y="277.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B3. 목표위치생성</text>
+<text x="1290.0" y="293.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[ik_node · C++]</text>
+<text x="1180.0" y="315.0" font-size="11" fill="#1f2937">목표 손목 위치(x,y,z)를 들고 있다가</text>
+<text x="1180.0" y="329.5" font-size="11" fill="#1f2937">매 주기: 목표 += 방향×속도×dt</text>
+<text x="1180.0" y="344.0" font-size="11" fill="#1f2937">작업영역 밖이면 그 방향은 무시</text>
+<text x="1180.0" y="358.5" font-size="11" fill="#1f2937">시작 때는 current_wrist_pose로</text>
+<text x="1180.0" y="373.0" font-size="11" fill="#1f2937">목표를 맞춰 로봇이 튀지 않게 한다</text>
+<rect x="1620.0" y="255.0" width="240" height="150" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1740.0" y="277.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B4. 역기구학계산</text>
+<text x="1740.0" y="293.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[ik_node · C++]</text>
+<text x="1630.0" y="315.0" font-size="11" fill="#1f2937">pan = atan2(y, x)</text>
+<text x="1630.0" y="329.5" font-size="11" fill="#1f2937">손목까지의 거리 r, 높이 z로</text>
+<text x="1630.0" y="344.0" font-size="11" fill="#1f2937">코사인법칙 → lift, elbow</text>
+<text x="1630.0" y="358.5" font-size="11" fill="#1f2937">(팔꿈치가 위로 가는 해만 사용)</text>
+<text x="1630.0" y="373.0" font-size="11" fill="#1f2937">도달할 수 없으면 직전 값 유지</text>
+<rect x="1170.0" y="485.0" width="240" height="150" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1290.0" y="507.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B5. 손목기울기계산</text>
+<text x="1290.0" y="523.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[wrist_node · C++]</text>
+<text x="1180.0" y="545.0" font-size="11" fill="#1f2937">목표 기울기를 들고 있다가</text>
+<text x="1180.0" y="559.5" font-size="11" fill="#1f2937">Ctrl+W/S 오면 목표 기울기 ±= 속도×dt</text>
+<text x="1180.0" y="574.0" font-size="11" fill="#1f2937">wrist_flex = 목표 기울기 − (lift+elbow)</text>
+<text x="1180.0" y="588.5" font-size="11" fill="#1f2937">T를 끄면 목표를 관절각 자체로 사용</text>
+<text x="1180.0" y="603.0" font-size="11" fill="#1f2937">한계에 걸리면 한계값, 목표는 유지</text>
+<rect x="1170.0" y="695.0" width="240" height="150" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1290.0" y="717.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B6. 손목회전제어</text>
+<text x="1290.0" y="733.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[direct_node · C++]</text>
+<text x="1180.0" y="755.0" font-size="11" fill="#1f2937">wrist_roll 목표각을 들고 있다가</text>
+<text x="1180.0" y="769.5" font-size="11" fill="#1f2937">Ctrl+A/D 오면 목표 ±= 속도×dt</text>
+<text x="1180.0" y="784.0" font-size="11" fill="#1f2937">관절 한계를 넘지 않게 자른다</text>
+<text x="1180.0" y="798.5" font-size="11" fill="#1f2937">시작 때는 현재 관절각으로 맞춘다</text>
+<rect x="1170.0" y="875.0" width="240" height="150" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="1290.0" y="897.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B7. 그리퍼제어</text>
+<text x="1290.0" y="913.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[direct_node · C++]</text>
+<text x="1180.0" y="935.0" font-size="11" fill="#1f2937">gripper 목표값을 들고 있다가</text>
+<text x="1180.0" y="949.5" font-size="11" fill="#1f2937">←(닫기) / →(열기)가</text>
+<text x="1180.0" y="964.0" font-size="11" fill="#1f2937">눌린 동안 목표 ±= 속도×dt</text>
+<text x="1180.0" y="978.5" font-size="11" fill="#1f2937">열림·닫힘 한계를 넘지 않게 자른다</text>
+<rect x="2080.0" y="510.0" width="240" height="200" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="2200.0" y="532.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B8. 관절명령통합</text>
+<text x="2200.0" y="548.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[merge_node · C++]</text>
+<text x="2090.0" y="570.0" font-size="11" fill="#1f2937">B4·B5·B6·B7의 목표값을 모아</text>
+<text x="2090.0" y="584.5" font-size="11" fill="#1f2937">6개 관절 순서의 한 벌로 만든다</text>
+<text x="2090.0" y="599.0" font-size="11" fill="#1f2937">① 각 값을 joint_limits로 자른다</text>
+<text x="2090.0" y="613.5" font-size="11" fill="#1f2937">② 한 주기 최대 변화량을 넘으면</text>
+<text x="2090.0" y="628.0" font-size="11" fill="#1f2937">   그만큼만 움직이게 제한한다</text>
+<text x="2090.0" y="642.5" font-size="11" fill="#1f2937">③ joint_command로 내보낸다</text>
+<rect x="2510.0" y="535.0" width="240" height="150" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+<text x="2630.0" y="557.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B9. 액추에이터제어</text>
+<text x="2630.0" y="573.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[driver_node · Python]</text>
+<text x="2520.0" y="595.0" font-size="11" fill="#1f2937">joint_command의 각도를</text>
+<text x="2520.0" y="609.5" font-size="11" fill="#1f2937">LeRobot 단위(보정값 적용)로 바꿔</text>
+<text x="2520.0" y="624.0" font-size="11" fill="#1f2937">서보모터에 목표 위치로 보낸다</text>
+<rect x="2990.0" y="578.0" width="110" height="64" rx="32" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="3045.0" y="606" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">SO-101</text>
+<text x="3045.0" y="625" text-anchor="middle" font-size="11" fill="#4b5563">서보모터 6개</text>
+<rect x="2510.0" y="15.0" width="240" height="150" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="2630.0" y="37.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B10. 관절상태읽기</text>
+<text x="2630.0" y="53.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[driver_node · Python]</text>
+<text x="2520.0" y="75.0" font-size="11" fill="#1f2937">서보모터의 현재 위치를 읽어</text>
+<text x="2520.0" y="89.5" font-size="11" fill="#1f2937">각도(rad)로 바꿔 joint_state로</text>
+<text x="2520.0" y="104.0" font-size="11" fill="#1f2937">매 주기 내보낸다</text>
+<rect x="1170.0" y="15.0" width="240" height="150" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+<text x="1290.0" y="37.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B11. 순기구학계산</text>
+<text x="1290.0" y="53.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[ik_node · C++]</text>
+<text x="1180.0" y="75.0" font-size="11" fill="#1f2937">joint_state의 pan·lift·elbow로</text>
+<text x="1180.0" y="89.5" font-size="11" fill="#1f2937">손목 점(4번째 관절 축) 위치를</text>
+<text x="1180.0" y="104.0" font-size="11" fill="#1f2937">링크 길이로 계산한다</text>
+<text x="1180.0" y="118.5" font-size="11" fill="#1f2937">→ current_wrist_pose</text>
+<text x="1180.0" y="133.0" font-size="11" fill="#1f2937">(역기구학의 반대 방향 계산)</text>
+<rect x="340.0" y="15.0" width="240" height="150" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="460.0" y="37.0" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">B12. 시각화·모니터링</text>
+<text x="460.0" y="53.0" text-anchor="middle" font-size="10.5" fill="#6b7280">[디버깅용 · 선택]</text>
+<text x="350.0" y="75.0" font-size="11" fill="#1f2937">목표·현재 손목 위치를</text>
+<text x="350.0" y="89.5" font-size="11" fill="#1f2937">화면(터미널 로그 또는 RViz2)에</text>
+<text x="350.0" y="104.0" font-size="11" fill="#1f2937">표시한다. 조작에는 필요 없다</text>
+<rect x="20.0" y="58.0" width="100" height="64" rx="32" fill="#f3f4f6" stroke="#6b7280" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="70.0" y="86" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">사용자</text>
+<text x="70.0" y="105" text-anchor="middle" font-size="11" fill="#4b5563">(화면)</text>
+<rect x="2080.0" y="918.0" width="240" height="64" rx="32" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+<text x="2200.0" y="946" text-anchor="middle" font-size="15" font-weight="700" fill="#111827">캘리브레이션</text>
+<text x="2200.0" y="965" text-anchor="middle" font-size="11" fill="#4b5563">관절 최대각 값 (joint_limits)</text>
+<rect x="124.23" y="536" width="101.53999999999999" height="21" fill="#fff" opacity="0.93"/>
+<text x="175.0" y="552" text-anchor="middle" font-size="17"  fill="#111827">키 누름·뗌</text>
+<rect x="474.57" y="536" width="100.85999999999999" height="21" fill="#fff" opacity="0.93"/>
+<text x="525.0" y="552" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">key_state</text>
+<rect x="470.525" y="568.5" width="108.95" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="525.0" y="582" text-anchor="middle" font-size="14.5"  fill="#4b5563">눌린 키·Ctrl</text>
+<rect x="966.8034782608695" y="306" width="132.48" height="21" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="322" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">move_vel_cmd</text>
+<rect x="919.1184782608696" y="338.5" width="227.85" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="352" text-anchor="middle" font-size="14.5"  fill="#4b5563">x·y·z 이동 방향 (-1/0/+1)</text>
+<rect x="995.4921739130435" y="536" width="90.32" height="21" fill="#fff" opacity="0.93"/>
+<text x="1040.6521739130435" y="552" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">tilt_cmd</text>
+<rect x="935.7171739130436" y="568.5" width="209.87" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1040.6521739130435" y="582" text-anchor="middle" font-size="14.5"  fill="#4b5563">Ctrl+W/S 기울기 · T 토글</text>
+<rect x="987.8834782608695" y="746" width="90.32" height="21" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="762" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">roll_cmd</text>
+<rect x="911.1434782608695" y="778.5" width="243.8" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="792" text-anchor="middle" font-size="14.5"  fill="#4b5563">Ctrl+A/D 회전 방향 (-1/0/+1)</text>
+<rect x="972.0734782608695" y="926" width="121.94" height="21" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="942" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">gripper_cmd</text>
+<rect x="961.3134782608695" y="958.5" width="143.46" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1033.0434782608695" y="972" text-anchor="middle" font-size="14.5"  fill="#4b5563">← 닫기 · → 열기</text>
+<rect x="1427.68" y="306" width="174.64" height="21" fill="#fff" opacity="0.93"/>
+<text x="1515.0" y="322" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">target_wrist_pos</text>
+<rect x="1430.8" y="338.5" width="168.4" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1515.0" y="352" text-anchor="middle" font-size="14.5"  fill="#4b5563">손목 점 목표 (x,y,z)</text>
+<rect x="1427.68" y="431" width="174.64" height="21" fill="#fff" opacity="0.93"/>
+<text x="1515.0" y="447" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">arm_joint_target</text>
+<rect x="1384.835" y="463.5" width="260.33000000000004" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1515.0" y="477" text-anchor="middle" font-size="14.5"  fill="#4b5563">팔 관절 목표 (pan·lift·elbow)</text>
+<rect x="1794.8305882352943" y="421.5" width="174.64" height="21" fill="#fff" opacity="0.93"/>
+<text x="1966.4705882352941" y="437.5" text-anchor="end" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">arm_joint_target</text>
+<rect x="1826.590588235294" y="444.0" width="142.88" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1966.4705882352941" y="457.5" text-anchor="end" font-size="14.5"  fill="#4b5563">pan·lift·elbow</text>
+<rect x="1617.41" y="556" width="185.17999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="1710.0" y="572" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">wrist_flex_target</text>
+<rect x="1642.765" y="588.5" width="134.47" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1710.0" y="602" text-anchor="middle" font-size="14.5"  fill="#4b5563">4번째 관절 목표각</text>
+<rect x="1607.41" y="746" width="185.17999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="1700.0" y="762" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">wrist_roll_target</text>
+<rect x="1632.765" y="778.5" width="134.47" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1700.0" y="792" text-anchor="middle" font-size="14.5"  fill="#4b5563">5번째 관절 목표각</text>
+<rect x="1653.22" y="926" width="153.56" height="21" fill="#fff" opacity="0.93"/>
+<text x="1730.0" y="942" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">gripper_target</text>
+<rect x="1660.01" y="958.5" width="139.98" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1730.0" y="972" text-anchor="middle" font-size="14.5"  fill="#4b5563">그리퍼 목표 열림값</text>
+<rect x="2207.0" y="798.0" width="132.48" height="21" fill="#fff" opacity="0.93"/>
+<text x="2210.0" y="814.0" text-anchor="start" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">joint_limits</text>
+<rect x="2207.0" y="820.5" width="145.49" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="2210.0" y="834.0" text-anchor="start" font-size="14.5"  fill="#4b5563">관절별 최소·최대각</text>
+<rect x="2343.49" y="586" width="143.01999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="2415.0" y="602" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">joint_command</text>
+<rect x="2328.045" y="618.5" width="173.91" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="2415.0" y="632" text-anchor="middle" font-size="14.5"  fill="#4b5563">6개 관절 목표각 (rad)</text>
+<rect x="2766.87" y="586" width="206.26" height="21" fill="#fff" opacity="0.93"/>
+<text x="2870.0" y="602" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">motor_goal_position</text>
+<rect x="2819.005" y="618.5" width="101.99" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="2870.0" y="632" text-anchor="middle" font-size="14.5"  fill="#4b5563">각도→모터 값</text>
+<rect x="2806.12" y="66" width="237.88" height="21" fill="#fff" opacity="0.93"/>
+<text x="2925.06" y="82" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">motor_present_position</text>
+<rect x="2869.57" y="98.5" width="110.98" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="2925.06" y="112" text-anchor="middle" font-size="14.5"  fill="#4b5563">현재 모터 위치</text>
+<rect x="1902.5594117647058" y="66" width="121.94" height="21" fill="#fff" opacity="0.93"/>
+<text x="1963.5294117647059" y="82" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">joint_state</text>
+<rect x="1892.814411764706" y="98.5" width="141.43" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1963.5294117647059" y="112" text-anchor="middle" font-size="14.5"  fill="#4b5563">현재 관절각 (rad)</text>
+<rect x="1297.0" y="194.0" width="195.71999999999997" height="21" fill="#fff" opacity="0.93"/>
+<text x="1300.0" y="210.0" text-anchor="start" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">current_wrist_pose</text>
+<rect x="1297.0" y="216.5" width="110.98" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="1300.0" y="230.0" text-anchor="start" font-size="14.5"  fill="#4b5563">현재 손목 위치</text>
+<rect x="717.14" y="66" width="195.71999999999997" height="21" fill="#fff" opacity="0.93"/>
+<text x="815.0" y="82" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">current_wrist_pose</text>
+<rect x="759.51" y="98.5" width="110.98" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="815.0" y="112" text-anchor="middle" font-size="14.5"  fill="#4b5563">현재 손목 위치</text>
+<rect x="687.6800000000001" y="176" width="174.64" height="21" fill="#fff" opacity="0.93"/>
+<text x="775.0" y="192" text-anchor="middle" font-size="17" font-family="DejaVu Sans Mono, monospace" fill="#111827">target_wrist_pos</text>
+<rect x="719.51" y="208.5" width="110.98" height="18.5" fill="#fff" opacity="0.93"/>
+<text x="775.0" y="222" text-anchor="middle" font-size="14.5"  fill="#4b5563">목표 손목 위치</text>
+<rect x="158.92000000000002" y="66" width="180.07999999999998" height="21" fill="#fff" opacity="0.93"/>
+<text x="248.96" y="82" text-anchor="middle" font-size="17"  fill="#111827">현재·목표 위치 표시</text>
+<text x="20" y="1074" font-size="17" fill="#4b5563">※ 시작할 때 B3·B5·B6·B7은 현재 상태(current_wrist_pose, joint_state)로 목표를 맞추고 시작한다. 처음에 로봇이 튀지 않게 하기 위해서다. (joint_state 화살표는 선을 줄이려고 B11만 그렸다)</text>
+<text x="20" y="1104" font-size="17" fill="#4b5563">※ 역기구학 기준점 = 4번째 관절(wrist_flex 축)의 위치(손목 점). B5~B7도 joint_limits를 같은 설정 파일에서 읽어 목표가 한계를 넘지 않게 한다.</text>
+<text x="20" y="1134" font-size="17" fill="#4b5563">※ 같은 노드 안의 블럭끼리는 함수 호출로, 노드 사이는 토픽으로 데이터를 주고받는다. 블럭 이름 아래 [ ]는 그 블럭이 들어가는 노드다.</text>
+<rect x="2480" y="860" width="20" height="20" rx="3" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="2510" y="876" font-size="16" fill="#374151">입력·해석</text>
+<rect x="2480" y="892" width="20" height="20" rx="3" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="2510" y="908" font-size="16" fill="#374151">목표 만들기·계산</text>
+<rect x="2480" y="924" width="20" height="20" rx="3" fill="#ffedd5" stroke="#ea580c" stroke-width="1.5"/>
+<text x="2510" y="940" font-size="16" fill="#374151">구동</text>
+<rect x="2480" y="956" width="20" height="20" rx="3" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="2510" y="972" font-size="16" fill="#374151">상태·표시</text>
+<rect x="2480" y="988" width="20" height="20" rx="3" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.5"/>
+<text x="2510" y="1004" font-size="16" fill="#374151">블럭 밖 (사람·하드웨어)</text>
+<text x="2480" y="1038" font-size="16" fill="#374151">화살표 = 데이터 흐름 (굵은 글씨 = 데이터 이름, 작은 글씨 = 설명)</text>
+<text x="2480" y="1064" font-size="16" fill="#374151">점선 = 디버깅용(선택)</text>
+</svg>
