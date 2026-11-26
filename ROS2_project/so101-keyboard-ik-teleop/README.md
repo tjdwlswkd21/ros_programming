@@ -32,6 +32,8 @@ LeRobot SO-101 로봇팔을 키보드로 조종한다.
 
 로봇의 USB를 WSL로 넘겨야 `/dev/ttyACM*`가 생긴다. 한 번 설치하고 처음 한 번 `bind` 하면, 이후에는 `attach`만 하면 된다.
 
+> 📦 **Windows 준비물(usbipd-win 설치 파일)과 자세한 설명은 [`../so101-windows-setup`](../so101-windows-setup)** 에 있다. clone 없이 Windows에서 바로 받아 설치할 수 있다.
+
 1. **(처음 한 번) Windows에 usbipd-win 설치** — PowerShell
    ```powershell
    winget install --interactive --exact dorssel.usbipd-win
