@@ -1,0 +1,73 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid (5 cm)
+      Enabled: true
+      Cell Size: 0.05
+      Plane Cell Count: 12
+      Reference Frame: <Fixed Frame>
+      Color: 160; 160; 164
+      Alpha: 0.5
+    - Class: rviz_default_plugins/Axes
+      Name: Base (x red, y green, z blue)
+      Enabled: true
+      Reference Frame: <Fixed Frame>
+      Length: 0.1
+      Radius: 0.004
+    - Class: rviz_default_plugins/PointStamped
+      Name: Target wrist (red)
+      Enabled: true
+      Topic:
+        Value: /target_wrist_pos
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Color: 239; 41; 41
+      Alpha: 1
+      Radius: 0.012
+      History Length: 1
+    - Class: rviz_default_plugins/PointStamped
+      Name: Current wrist (green)
+      Enabled: true
+      Topic:
+        Value: /current_wrist_pose
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Color: 78; 154; 6
+      Alpha: 1
+      Radius: 0.01
+      History Length: 30
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Target Frame: <Fixed Frame>
+      Focal Point:
+        X: 0.15
+        Y: 0
+        Z: 0.12
+      Distance: 0.8
+      Pitch: 0.45
+      Yaw: 3.6
+Window Geometry:
+  Width: 1000
+  Height: 700
+  Displays:
+    collapsed: false

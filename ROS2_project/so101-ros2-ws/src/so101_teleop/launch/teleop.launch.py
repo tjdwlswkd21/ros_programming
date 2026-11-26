@@ -4,6 +4,7 @@
   ros2 launch so101_teleop teleop.launch.py                  # 실제 로봇
   ros2 launch so101_teleop teleop.launch.py use_mock:=true   # 로봇 없이 시험
   ros2 launch so101_teleop teleop.launch.py read_only:=true  # 토크 끄고 관절각만 확인
+  ros2 launch so101_teleop teleop.launch.py debug:=true      # + 손목 위치 토픽 발행, RViz 표시
 """
 import os
 from pathlib import Path
@@ -35,6 +36,7 @@ def launch_setup(context):
     robot_config = Path(arg('robot_config_dir') or ws / 'robot_config')
     venv = Path(arg('venv') or os.environ.get('SO101_VENV', '') or ws / '.venv')
     use_mock = arg('use_mock').lower() == 'true'
+    debug = arg('debug').lower() == 'true'
 
     # 로봇별 값: capture_home.sh 가 만든 home_offsets.yaml 이 있으면 덮어쓴다
     params = [params_file]
@@ -65,7 +67,7 @@ def launch_setup(context):
     nodes = [
         keyboard,
         Node(package='so101_teleop', executable='ik_node', name='ik_node',
-             parameters=params, output='screen'),
+             parameters=params + [{'publish_debug': debug}], output='screen'),
         Node(package='so101_teleop', executable='wrist_node', name='wrist_node',
              parameters=params, output='screen'),
         Node(package='so101_teleop', executable='direct_node', name='direct_node',
@@ -78,6 +80,11 @@ def launch_setup(context):
         RegisterEventHandler(OnProcessExit(
             target_action=keyboard, on_exit=[EmitEvent(event=Shutdown(reason='키 입력 창 닫힘'))])),
     ]
+    # B12 시각화·모니터링 (디버깅용): debug:=true 일 때만
+    if debug:
+        nodes.append(Node(package='rviz2', executable='rviz2', name='rviz2',
+                          arguments=['-d', os.path.join(share, 'config', 'debug.rviz')],
+                          output='log'))
     return nodes
 
 
@@ -87,6 +94,8 @@ def generate_launch_description():
                               description='true: 로봇 없이 가상 드라이버로 실행'),
         DeclareLaunchArgument('read_only', default_value='false',
                               description='true: 토크를 끄고 관절각만 읽는다 (방향/한계 확인용)'),
+        DeclareLaunchArgument('debug', default_value='false',
+                              description='true: 목표/현재 손목 위치 토픽 발행 + RViz 실행 (B12)'),
         DeclareLaunchArgument('port', default_value='/dev/ttyACM0'),
         DeclareLaunchArgument('robot_id', default_value='so101_follower',
                               description='robot_config/calibration/<robot_id>.json'),

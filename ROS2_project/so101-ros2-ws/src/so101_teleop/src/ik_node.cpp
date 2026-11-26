@@ -3,6 +3,7 @@
 // 시작할 때 /joint_states 로 현재 손목 위치를 구해 목표로 삼고,
 // 이후 /move_cmd 방향으로 목표점을 쌓아 가며 IK로 pan/lift/elbow 를 구한다.
 // 작업영역이나 관절 한계를 넘는 이동은 무시한다 (이미 밖에 있으면 안쪽으로 가는 이동만 허용).
+// publish_debug:=true 일 때만 B12(시각화)용 목표/현재 손목 위치를 발행한다.
 #include <cmath>
 #include <memory>
 #include <vector>
@@ -34,6 +35,7 @@ public:
       throw std::runtime_error("workspace_min / workspace_max 는 (x, y, z) 3개 값이 필요합니다");
     }
     move_speed_ = declare_parameter("move_speed", 0.05);
+    const bool publish_debug = declare_parameter("publish_debug", false);
     cmd_timeout_ = declare_parameter("cmd_timeout", 0.3);
     const double rate_hz = declare_parameter("rate_hz", 50.0);
     dt_ = 1.0 / rate_hz;
@@ -50,8 +52,10 @@ public:
       "joint_states", 10, [this](const sensor_msgs::msg::JointState & m) {on_joint_state(m);});
 
     arm_pub_ = create_publisher<sensor_msgs::msg::JointState>("arm_target", 10);
-    target_pub_ = create_publisher<geometry_msgs::msg::PointStamped>("target_wrist_pos", 10);
-    current_pub_ = create_publisher<geometry_msgs::msg::PointStamped>("current_wrist_pose", 10);
+    if (publish_debug) {
+      target_pub_ = create_publisher<geometry_msgs::msg::PointStamped>("target_wrist_pos", 10);
+      current_pub_ = create_publisher<geometry_msgs::msg::PointStamped>("current_wrist_pose", 10);
+    }
 
     timer_ = create_wall_timer(
       std::chrono::duration<double>(dt_), [this]() {on_timer();});
@@ -70,7 +74,9 @@ private:
       return;
     }
     const Vec3 p = so101_teleop::forward(geo_, cur);
-    current_pub_->publish(point_msg(p));
+    if (current_pub_) {
+      current_pub_->publish(point_msg(p));
+    }
 
     if (!initialized_) {
       target_ = p;
@@ -118,7 +124,9 @@ private:
       so101_teleop::joint_names()[so101_teleop::ELBOW]};
     arm.position = {angles_.pan, angles_.lift, angles_.elbow};
     arm_pub_->publish(arm);
-    target_pub_->publish(point_msg(target_));
+    if (target_pub_) {
+      target_pub_->publish(point_msg(target_));
+    }
   }
 
   bool try_move(const Vec3 & d)
