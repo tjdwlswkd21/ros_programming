@@ -1,0 +1,4 @@
+# driver_node 용 파이썬 패키지 (scripts/setup.sh 가 .venv 에 설치)
+# CPU 용 PyTorch 를 받아서 용량을 줄인다
+--extra-index-url https://download.pytorch.org/whl/cpu
+lerobot[feetech]==0.7.0

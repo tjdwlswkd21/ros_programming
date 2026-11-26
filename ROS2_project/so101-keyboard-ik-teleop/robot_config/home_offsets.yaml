@@ -1,0 +1,4 @@
+# scripts/capture_home.sh 가 만든 파일. home 자세에서 읽은 LeRobot 각도(도)
+driver_node:
+  ros__parameters:
+    home_deg: [3.21, -3.16, 9.67, -1.63, 84.26]

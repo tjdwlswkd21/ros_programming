@@ -1,0 +1,59 @@
+# SO-101 키보드 IK 텔레옵 파라미터
+# 단위: 위치 m, 각도 rad, 그리퍼 0~100
+# 관절 순서: [shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_roll, gripper]
+# 각도 규약은 src/so101_teleop/include/so101_teleop/kinematics.hpp 주석 참고
+#   (lift: 수평=0, 수직=pi/2 / elbow: 상완 대비, 팔꿈치 위로 굽으면 음수 / 기울기 = lift+elbow+wrist_flex)
+
+# 모든 노드가 같이 읽는 값
+/**:
+  ros__parameters:
+    rate_hz: 50.0
+    cmd_timeout: 0.3            # 이 시간 동안 키 명령이 없으면 정지 (s)
+    tilt_hold_default: true     # 시작할 때 기울기 유지 ON/OFF
+
+    # 관절 한계 (robot_config/calibration 의 모터 범위에서 양쪽 5도씩 안쪽으로 계산한 값)
+    # 시작 자세가 이 범위 밖이면 merge_node 가 범위 안으로 천천히 끌어온다.
+    joint_min: [-1.53, -0.47, -2.75, -1.73, -4.52, 0.0]
+    joint_max: [ 1.64,  3.02,  0.43,  1.67,  1.58, 100.0]
+
+ik_node:
+  ros__parameters:
+    # 링크 길이 (SO-101 URDF 기준 근사값)
+    shoulder_height: 0.119      # 바닥 -> shoulder_lift 축
+    shoulder_offset: 0.030      # pan 축 -> shoulder_lift 축 (앞쪽 +)
+    upper_arm_length: 0.116     # shoulder_lift 축 -> elbow 축
+    forearm_length: 0.135       # elbow 축 -> wrist_flex 축
+    # 손목 점이 갈 수 있는 상자 (x, y, z)
+    workspace_min: [0.05, -0.30, 0.02]
+    workspace_max: [0.30,  0.30, 0.35]   # 팔 길이로 닿는 거리는 약 0.28 m
+    move_speed: 0.05            # m/s
+
+wrist_node:
+  ros__parameters:
+    tilt_speed: 0.8             # rad/s
+
+direct_node:
+  ros__parameters:
+    roll_speed: 1.5             # rad/s
+    gripper_speed: 60.0         # /s
+
+merge_node:
+  ros__parameters:
+    max_joint_speed: 1.5        # rad/s, 관절 명령 변화량 제한
+    max_gripper_speed: 100.0    # /s
+
+driver_node:
+  ros__parameters:
+    rate_hz: 50.0
+    joint_names: [shoulder_pan, shoulder_lift, elbow_flex, wrist_flex, wrist_roll, gripper]
+    # 모델 각도 = home_model_rad + sign * (LeRobot 각도 - home_deg)   (팔 관절 5개)
+    # home 자세 = LeRobot 캘리브레이션 그림 자세: 상완 수직, 전완 수평 앞, 손목 일자
+    #   상완은 elbow 축이 0.028 m 앞으로 꺾여 있어서 유효 lift 는 약 76도(1.326 rad)
+    home_model_rad: [0.0, 1.326, -1.326, 0.0, 0.0]
+    # home 자세에서 읽은 LeRobot 각도. scripts/capture_home.sh 가 robot_config/home_offsets.yaml 에 저장하고
+    # launch 가 그 파일로 이 값을 덮어쓴다.
+    home_deg: [0.0, 0.0, 0.0, 0.0, 0.0]
+    # 모터가 모델 방향과 반대로 돌면 -1.0 (SO-101 실측: pan, lift, elbow, wrist_flex 모두 반대)
+    joint_signs: [-1.0, -1.0, -1.0, -1.0, 1.0]
+    disable_torque_on_exit: false   # true 면 종료할 때 팔이 힘이 빠져 떨어진다
+    mock_gripper: 30.0

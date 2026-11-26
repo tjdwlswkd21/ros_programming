@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>so101_driver</name>
+  <version>1.0.0</version>
+  <description>SO-101 LeRobot 드라이버 노드 (lerobot 은 requirements.txt 로 venv 에 설치)</description>
+  <maintainer email="tjdwlswkd21@gmail.com">tjdwlswkd21</maintainer>
+  <license>Apache-2.0</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
