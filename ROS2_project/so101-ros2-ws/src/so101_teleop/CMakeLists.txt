@@ -10,13 +10,14 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 find_package(glfw3 REQUIRED)
 set(OpenGL_GL_PREFERENCE GLVND)
 find_package(OpenGL REQUIRED)
 
 include_directories(include)
 
-set(NODES keyboard_node ik_node wrist_node direct_node merge_node)
+set(NODES keyboard_node ik_node wrist_node direct_node merge_node viz_node)
 foreach(node ${NODES})
   add_executable(${node} src/${node}.cpp)
   target_compile_features(${node} PUBLIC cxx_std_17)
@@ -24,6 +25,7 @@ foreach(node ${NODES})
   install(TARGETS ${node} DESTINATION lib/${PROJECT_NAME})
 endforeach()
 target_link_libraries(keyboard_node glfw OpenGL::GL)
+ament_target_dependencies(viz_node visualization_msgs)
 
 install(DIRECTORY launch config DESTINATION share/${PROJECT_NAME})
 

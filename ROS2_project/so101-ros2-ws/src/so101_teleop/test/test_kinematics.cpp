@@ -42,3 +42,18 @@ TEST(Kinematics, HomePose)
   EXPECT_NEAR(p.y, 0.0, 1e-9);
   EXPECT_NEAR(p.z, g.shoulder_height + g.upper_arm, 1e-9);
 }
+
+// 막대 그림의 손목 점은 FK 손목 위치와 같아야 한다
+TEST(Kinematics, ArmChainMatchesForward)
+{
+  const ArmGeometry g;
+  const ArmAngles a{0.3, 1.1, -1.4};
+  const auto chain = arm_chain(g, a, 0.2, 0.10);
+  const Vec3 w = forward(g, a);
+  EXPECT_NEAR(chain[4].x, w.x, 1e-12);
+  EXPECT_NEAR(chain[4].y, w.y, 1e-12);
+  EXPECT_NEAR(chain[4].z, w.z, 1e-12);
+  // 그리퍼 끝은 손목에서 gripper_length 만큼 떨어져 있다
+  const double d = std::hypot(chain[5].x - w.x, chain[5].y - w.y, chain[5].z - w.z);
+  EXPECT_NEAR(d, 0.10, 1e-12);
+}

@@ -16,13 +16,14 @@
     joint_min: [-1.53, -0.47, -2.75, -1.73, -4.52, 0.0]
     joint_max: [ 1.64,  3.02,  0.43,  1.67,  1.58, 100.0]
 
-ik_node:
-  ros__parameters:
-    # 링크 길이 (SO-101 URDF 기준 근사값)
+    # 링크 길이 (SO-101 URDF 기준 근사값) - ik_node, viz_node 가 같이 쓴다
     shoulder_height: 0.119      # 바닥 -> shoulder_lift 축
     shoulder_offset: 0.030      # pan 축 -> shoulder_lift 축 (앞쪽 +)
     upper_arm_length: 0.116     # shoulder_lift 축 -> elbow 축
     forearm_length: 0.135       # elbow 축 -> wrist_flex 축
+
+ik_node:
+  ros__parameters:
     # 손목 점이 갈 수 있는 상자 (x, y, z)
     workspace_min: [0.05, -0.30, 0.02]
     workspace_max: [0.30,  0.30, 0.35]   # 팔 길이로 닿는 거리는 약 0.28 m
@@ -36,6 +37,10 @@ direct_node:
   ros__parameters:
     roll_speed: 1.5             # rad/s
     gripper_speed: 60.0         # /s
+
+viz_node:
+  ros__parameters:
+    gripper_length: 0.10        # wrist_flex 축 -> 그리퍼 끝 (그림용)
 
 merge_node:
   ros__parameters:

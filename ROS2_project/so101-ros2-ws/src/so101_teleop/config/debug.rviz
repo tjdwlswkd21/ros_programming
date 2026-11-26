@@ -18,6 +18,17 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Length: 0.1
       Radius: 0.004
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Arm (stick figure)
+      Enabled: true
+      Topic:
+        Value: /arm_markers
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Namespaces:
+        arm: true
     - Class: rviz_default_plugins/PointStamped
       Name: Target wrist (red)
       Enabled: true

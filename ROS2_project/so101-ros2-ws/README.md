@@ -31,13 +31,24 @@ cd ~/ros_programming/ROS2_project/so101-ros2-ws
 ./scripts/run.sh use_mock:=true     # 로봇 없이 시험 (가상 드라이버)
 ./scripts/run.sh read_only:=true    # 토크 끄고 관절각만 읽기 (손으로 움직여 방향/한계 확인)
 ./scripts/run.sh port:=/dev/ttyACM1 # 포트가 다를 때
-./scripts/run.sh debug:=true        # 디버그(B12): 손목 위치 토픽 발행 + RViz 자동 실행
+./scripts/run.sh debug:=true        # 디버그(B12): 팔 막대 그림 + 손목 위치를 RViz 로 표시
 ```
-옵션은 같이 쓸 수 있다. 예) `./scripts/run.sh use_mock:=true debug:=true`
+옵션은 같이 쓸 수 있다. 로봇 없이 화면으로만 보려면(시뮬레이션):
+```bash
+./scripts/run.sh use_mock:=true debug:=true
+```
 
 **debug 옵션**
-- 기본(옵션 없음): 제어에 필요한 노드 6개만 실행한다. 디버그용 토픽(`/target_wrist_pos`, `/current_wrist_pose`)은 아예 만들지 않고 RViz 도 띄우지 않는다.
-- `debug:=true`: `ik_node`가 목표·현재 손목 위치를 발행하고, RViz 가 설정(`config/debug.rviz`)을 불러와 함께 뜬다. 빨간 점 = 목표 위치, 초록 점 = 현재 위치(지나온 자취 포함), 바닥 격자 한 칸 = 5 cm.
+- 기본(옵션 없음): 제어에 필요한 노드 6개만 실행한다. 디버그용 노드·토픽은 아예 만들지 않고 RViz 도 띄우지 않는다.
+- `debug:=true`: 아래가 추가로 실행되고 RViz 가 설정(`config/debug.rviz`)을 불러와 함께 뜬다.
+  - `viz_node`: 현재 관절각으로 팔 모양을 막대 그림으로 그린다 (`/arm_markers`, IK 와 같은 공식). 그리퍼 끝 위에 열림 값 표시
+  - `ik_node`: 목표·현재 손목 위치 발행 → 빨간 점 = 목표, 초록 점 = 현재(지나온 자취 포함)
+  - 바닥 격자 한 칸 = 5 cm, 빨강/초록/파랑 축 = x(앞)/y(왼쪽)/z(위)
+
+| 옵션 | 뜻 |
+|---|---|
+| `use_mock:=true` | 팔로워 암 없이 가상 로봇으로 실행 (없으면 실제 팔이 연결돼 있어야 한다) |
+| `debug:=true` | RViz 로 팔 모양·손목 위치 표시 (실제 팔, 가상 로봇 모두 가능) |
 
 키 입력 창이 Windows 화면에 뜨면 클릭해서 포커스를 주고 조작한다. 창 색: 회색 = 포커스 없음(정지), 파랑 = 대기, 초록 = 동작 중. 창을 닫거나 터미널에서 Ctrl+C 를 누르면 전체가 종료된다.
 
@@ -70,6 +81,7 @@ so101-ros2-ws/
 ├── requirements.txt    lerobot (pip)
 └── src/
     ├── so101_teleop/   (C++)    keyboard_node, ik_node, wrist_node, direct_node, merge_node
+    │                            viz_node (debug 때만)
     │                            launch/teleop.launch.py, config/controller_params.yaml
     └── so101_driver/   (Python) driver_node (LeRobot), capture_home
 ```
@@ -83,3 +95,4 @@ so101-ros2-ws/
 | `/wrist_flex_target`, `/roll_target`, `/gripper_target` | `std_msgs/Float64` | 관절 목표 |
 | `/joint_command`, `/joint_states` | `sensor_msgs/JointState` | 6개 관절 명령 / 현재값 (rad, 그리퍼 0~100) |
 | `/target_wrist_pos`, `/current_wrist_pose` | `geometry_msgs/PointStamped` | 목표 / 현재 손목 위치 (`debug:=true` 일 때만) |
+| `/arm_markers` | `visualization_msgs/MarkerArray` | 팔 막대 그림 (`debug:=true` 일 때만, viz_node) |

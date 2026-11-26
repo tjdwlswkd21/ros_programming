@@ -8,6 +8,7 @@
 //   wrist_flex : 전완 대비 손목의 상대각  ->  손목 기울기 = lift + elbow + wrist_flex
 #pragma once
 
+#include <array>
 #include <cmath>
 #include <optional>
 
@@ -44,6 +45,26 @@ inline Vec3 forward(const ArmGeometry & g, const ArmAngles & a)
   const double z = g.shoulder_height + g.upper_arm * std::sin(a.lift) +
     g.forearm * std::sin(a.lift + a.elbow);
   return {r * std::cos(a.pan), r * std::sin(a.pan), z};
+}
+
+// 팔 모양 그리기용 (B12): 베이스 -> 어깨 축 높이 -> 어깨(lift 축) -> 팔꿈치 -> 손목 -> 그리퍼 끝
+inline std::array<Vec3, 6> arm_chain(
+  const ArmGeometry & g, const ArmAngles & a, double wrist_flex, double gripper_length)
+{
+  // (r, z) 평면의 점을 pan 방향으로 돌린다
+  auto at = [&a](double r, double z) {
+      return Vec3{r * std::cos(a.pan), r * std::sin(a.pan), z};
+    };
+  const double r1 = g.shoulder_offset;
+  const double z1 = g.shoulder_height;
+  const double r2 = r1 + g.upper_arm * std::cos(a.lift);
+  const double z2 = z1 + g.upper_arm * std::sin(a.lift);
+  const double r3 = r2 + g.forearm * std::cos(a.lift + a.elbow);
+  const double z3 = z2 + g.forearm * std::sin(a.lift + a.elbow);
+  const double tilt = a.lift + a.elbow + wrist_flex;
+  const double r4 = r3 + gripper_length * std::cos(tilt);
+  const double z4 = z3 + gripper_length * std::sin(tilt);
+  return {Vec3{0.0, 0.0, 0.0}, Vec3{0.0, 0.0, z1}, at(r1, z1), at(r2, z2), at(r3, z3), at(r4, z4)};
 }
 
 // 손목 점 위치 -> 관절각 (팔꿈치가 위로 가는 해). 닿지 않으면 nullopt

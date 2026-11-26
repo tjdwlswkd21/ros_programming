@@ -82,6 +82,12 @@ def launch_setup(context):
     ]
     # B12 시각화·모니터링 (디버깅용): debug:=true 일 때만
     if debug:
+        # RViz 가 'base' 좌표계를 알도록 world -> base 고정 TF
+        nodes.append(Node(package='tf2_ros', executable='static_transform_publisher',
+                          name='base_tf', output='log',
+                          arguments=['--frame-id', 'world', '--child-frame-id', 'base']))
+        nodes.append(Node(package='so101_teleop', executable='viz_node', name='viz_node',
+                          parameters=params, output='screen'))
         nodes.append(Node(package='rviz2', executable='rviz2', name='rviz2',
                           arguments=['-d', os.path.join(share, 'config', 'debug.rviz')],
                           output='log'))
@@ -95,7 +101,7 @@ def generate_launch_description():
         DeclareLaunchArgument('read_only', default_value='false',
                               description='true: 토크를 끄고 관절각만 읽는다 (방향/한계 확인용)'),
         DeclareLaunchArgument('debug', default_value='false',
-                              description='true: 목표/현재 손목 위치 토픽 발행 + RViz 실행 (B12)'),
+                              description='true: 손목 위치 토픽 + 팔 막대 그림(viz_node) + RViz 실행 (B12)'),
         DeclareLaunchArgument('port', default_value='/dev/ttyACM0'),
         DeclareLaunchArgument('robot_id', default_value='so101_follower',
                               description='robot_config/calibration/<robot_id>.json'),
