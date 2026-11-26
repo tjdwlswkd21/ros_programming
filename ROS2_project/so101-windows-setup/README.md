@@ -1,7 +1,7 @@
 # SO-101 텔레옵 — Windows 준비 (시연 PC)
 
 > 이 폴더는 **Windows에서 직접 받아서** 쓰는 파일이다. git clone 할 필요 없다.
-> 프로젝트 본체(ROS 2 패키지)는 [`../so101-keyboard-ik-teleop`](../so101-keyboard-ik-teleop) 이고, 그건 WSL 안에서 clone 한다.
+> ROS 2 패키지는 [`../so101-ros2-ws`](../so101-ros2-ws) 이고, 그건 WSL 안에서 clone 한다. 작품 설명은 [`../so101-keyboard-ik-teleop`](../so101-keyboard-ik-teleop).
 
 Windows에 필요한 것은 3가지다. **설정이 따로 필요한 것은 usbipd 하나뿐**이다.
 
@@ -91,12 +91,12 @@ usbipd detach --busid 2-3
 
 ```bash
 cd ~ && git clone https://github.com/tjdwlswkd21/ros_programming.git
-cd ros_programming/ROS2_project/so101-keyboard-ik-teleop
+cd ros_programming/ROS2_project/so101-ros2-ws
 ./scripts/setup.sh     # 처음 한 번
 # WSL 터미널을 새로 연 뒤
 ./scripts/run.sh
 ```
-자세한 내용은 [프로젝트 README](../so101-keyboard-ik-teleop/README.md#5-설치--실행).
+자세한 내용은 [ROS 2 워크스페이스 README](../so101-ros2-ws).
 
 ---
 
